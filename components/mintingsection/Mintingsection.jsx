@@ -7,7 +7,7 @@ const Mintingsection = (props) => {
   const [stat, setStat] = useState();
   const [count , setCount] = useState(0) ;
 
-   console.log(props)
+   //console.log(props)
 
     useEffect(()=>{
      //console.log("pp",props)

@@ -12,7 +12,7 @@ const topnav = (props) => {
         <input type="Search" placeholder='Search NFT Collections' />
       </div>
 
-    <Connect  address={props.address}/>
+      <Connect address={props.address} connect={props.connect} walletdiscon={props.walletdiscon} walletswitch={props.walletswitch} />
     </div>
   )
 }

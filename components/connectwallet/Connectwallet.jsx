@@ -22,13 +22,14 @@ const Connectwallet = (props) => {
 
   
     return (
-  //  <button  id="wallet" className={classes.connect__wallet}  onClick={!props.walletswitch?props.connect:props.walletdiscon}>
-  //   {props.address? addr: "Connect Wallet"}
-  //  </button> )
+   <button   className={classes.connect__wallet}  onClick={!props.walletswitch?props.connect:props.walletdiscon}>
+    {props.address? addr: "Connect Wallet"}
+   </button> )
 
-<button  id="wallet" className={classes.connect__wallet}  onClick={props.connect}>
+{/* <button  id="wallet" className={classes.connect__wallet}  onClick={props.connect}>
 {props.address? addr: "Connect Wallet"}
-</button> )
+</button>  */}
+//)
     
  
 

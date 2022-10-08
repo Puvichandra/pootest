@@ -2,21 +2,25 @@
 import classes from './nftcard.module.css'
 
 
-const nftcard = () => {
+const nftcard = (props) => {
   return (
-    <div className={classes.nft__card}>
+    <div className={classes.nft__card} onClick={props.closeFunc}>
         <div className={classes.card__image}>
-          <img src="img/poochain.png" alt="nFT" />
+          <img src={props.image} alt="nFT" />
         </div>
         <div className={classes.name}>
-        <h4>Poochain Genesis NFT 1</h4>
+        <h4>{props.name}</h4>
 
-        <small className={classes.text__muted}>Poochain Genesis</small>
+        {/* <small className={classes.text__muted}>Poochain Genesis</small> */}
         </div>
+      
         <div className={classes.nft__price}>
           <img src='img/bsc.png' alt="bnb" />
-          <h4>5.4 BNB</h4>
+          <h4>{props.price} BNB</h4>
+
+          <buttton onClick={()=>props.buy(props.nft)} className={classes.buy__btn}>Buy</buttton>
         </div>
+          
       </div>
   )
 }

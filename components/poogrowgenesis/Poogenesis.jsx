@@ -3,7 +3,7 @@ import classes from './poogenesis.module.css'
 import Connect from '../connectwallet/Connectwallet'
 import Mintingbanner from '../mintingbanner/Mintingbanner'
 import Mintingsection from '../mintingsection/Mintingsection'
-import Poster from '../../public/img/testposter.png'
+
 import styles from '../../styles/containerstyle.module.css';
 import { useEffect , useState } from 'react'
 import Claimrewards from '../claimrewards/Claimrewards'
@@ -32,7 +32,7 @@ const Poogenesis = (props) => {
       <Mintingbanner poster='img/testposter.png' />
       <Mintingsection  totalMinted={Number(props.totminted)} price={props.price} totsupply={props.totsupply} 
        sale={props.sale} mint={props.mint} noofnft={props.noofnft} address={props.address} pageno={props.pageno} />
-       <Claimrewards isActive={activeClaim} closeFunc={toggleClaim} poochain={props.poochain}/>
+       <Claimrewards isActive={activeClaim} closeFunc={toggleClaim} poochain={props.poochain} rewardsfunc={props.rewardsfunc}/>
 
     </div>
   )

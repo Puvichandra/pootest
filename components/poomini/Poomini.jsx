@@ -30,7 +30,7 @@ const Poomini = (props) => {
  
     <Mintingsection totalMinted={Number(props.totminted)} price={props.price} totsupply={props.totsupply}
        sale={props.sale} mint={props.mint} noofnft={props.noofnft} address={props.address}  pageno={props.pageno}/>
-       <Claimrewards isActive={activeClaim} closeFunc={toggleClaim} poochain={props.poochain} />
+       <Claimrewards isActive={activeClaim} closeFunc={toggleClaim} poochain={props.poochain} rewardsfunc={props.rewardsfunc}/>
   </div>
   )
 }

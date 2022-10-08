@@ -14,8 +14,8 @@ import styles from '../../styles/containerstyle.module.css';
 
 const Sidebar = (props) => {
 
- const [activePage , setPage] = useState(['','{classes.activeNav}',''])
- const [activePageone , setPageOne] = useState(2);
+ const [activePage , setPage] = useState(['{classes.activeNav}','','','',''])
+ const [activePageone , setPageOne] = useState(1);
 
 
   return (
@@ -35,9 +35,12 @@ const Sidebar = (props) => {
         <div className={classes.menu}>
           <h3>Menu</h3>
           <ul>
-            <a  href="#" className={activePageone===1?classes.activeNav:""} onClick={()=>{setPageOne(1); props.func(['','none','none']); props.pageno(1);}} ><li><BsShopWindow className={classes.sidebar__icons} />Marketplace</li></a>
-            <a href="#" className={activePageone===2?classes.activeNav:""} onClick={()=>{setPageOne(2);props.func(['none','','none']);props.pageno(2);}}><li><DiAtom className={classes.sidebar__icons}  />PooGrow Genesis Mint</li></a>
-            <a  href="#" className={activePageone===3?classes.activeNav:""} onClick={()=>{setPageOne(3); props.func(['none','none','']);props.pageno(3);}} ><li><GiRadioactive className={classes.sidebar__icons} />PooGrow Mini Mint</li></a>
+            <a  href="#" className={activePageone===1?classes.activeNav:""} onClick={()=>{setPageOne(1); props.func(['','none','none','none','none']); props.pageno(1);}} ><li><BsShopWindow className={classes.sidebar__icons} />Explore</li></a>
+            <a  href="#" className={activePageone===2?classes.activeNav:""} onClick={()=>{setPageOne(2); props.func(['none','','none','none','none']); props.pageno(2);}} ><li><BsShopWindow className={classes.sidebar__icons} />Mint NFTs</li></a>
+            <a  href="#" className={activePageone===3?classes.activeNav:""} onClick={()=>{setPageOne(3); props.func(['none','none','','none','none']); props.pageno(3);}} ><li><BsShopWindow className={classes.sidebar__icons} />Bridge NFTs</li></a>
+            <a  href="#" className={activePageone===4?classes.activeNav:""} onClick={()=>{setPageOne(4); props.func(['none','none','none','','none']); props.pageno(4);}} ><li><BsShopWindow className={classes.sidebar__icons} />My NFTs</li></a>
+            <a href="#" className={activePageone===5?classes.activeNav:""} onClick={()=>{setPageOne(5);props.func(['none','none','none','none','']);props.pageno(5);}}><li><DiAtom className={classes.sidebar__icons}  />PooGrow Genesis Mint</li></a>
+            {/* <a  href="#" className={activePageone===5?classes.activeNav:""} onClick={()=>{setPageOne(5); props.func(['none','none','none','none','']);props.pageno(5);}} ><li><GiRadioactive className={classes.sidebar__icons} />PooGrow Mini Mint</li></a> */}
             {/* <a href="#" className='active'><li><MdOutlineExplore className='sidebar__icons' />Explore</li></a> */}
             {/* <a href="#"><li><BsCardChecklist className='sidebar__icons' />Listing</li></a> */}
             {/* <a href="#"><li><MdOutlineCollections className='sidebar__icons' />Collection</li></a> */}

@@ -3,19 +3,14 @@ import classes from './nftgrid.module.css'
 import Nftcard from '../nftcard/nftcard'
 import styles from '../../styles/containerstyle.module.css';
 
-const nftgrid = () => {
+const nftgrid = (props) => {
   return (
-    <div className={`${classes.nftgrid__container} ${styles.container}`}>
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
-        <Nftcard />
+    <div className={classes.nftgrid__container}>
+      
+
+        <Nftcard key={props.key} buy={props.buy} closeFunc={props.closeFunc} image={props.image} name={props.name} price={props.price} />
+    {/* <Nftgrid nfts={nfts} nft={nft} key={index} image={nft.image} name={nft.name} price={nft.price} /> */}
+
     </div>
   )
 }

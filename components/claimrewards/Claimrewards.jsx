@@ -12,7 +12,7 @@ const Claimrewards = (props) => {
         <div className={classes.claim__wrapper}>
             <div className={classes.to__claim}>
             <h2>To Claim</h2>
-            <h3>{props.poochain} $PooP</h3>
+            <h3>{parseInt(props.poochain)} $PooP</h3>
             </div>
 
             {/* <div className={classes.claim__value}>
@@ -20,7 +20,7 @@ const Claimrewards = (props) => {
             <h3>10$</h3>
             </div> */}
         </div>
-        <button>CLAIM</button>
+        {props.poochain>0?<button  onClick={props.rewardsfunc}>CLAIM</button>: <button disabled>CLAIM</button>}
     <AiFillCloseCircle className={classes.claim__close} onClick={props.closeFunc} />
     </div>
     </div>  
